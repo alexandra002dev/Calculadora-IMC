@@ -20,7 +20,9 @@ input {
   padding: 5px;
   margin-bottom: 8px;
 }
-
+input:disabled {
+  opacity: 0.8;
+}
 .buttonCalc {
   background-color: #227c9d;
   border-radius: 8px;
@@ -33,4 +35,7 @@ input {
 }
 .buttonCalc:hover {
   opacity: 0.9;
+}
+.buttonCalc:disabled {
+  opacity: 0.5;
 }

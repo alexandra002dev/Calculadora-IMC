@@ -9,8 +9,6 @@ export const LeftSide = () => {
   function handleCalculeteButton() {
     if (ctx?.altura && ctx.peso) {
       ctx?.setShowItem(calculateImc(ctx?.altura, ctx.peso));
-      // ctx?.setAltura(null);
-      // ctx?.setPeso(null);
     } else {
       alert("Preencha todos os campos!");
     }
@@ -35,6 +33,7 @@ export const LeftSide = () => {
               : ""
           }
           onChange={(e) => ctx?.setAltura(parseFloat(e.target.value))}
+          disabled={ctx?.showItem ? true : false}
         />
         <input
           type="number"
@@ -45,9 +44,14 @@ export const LeftSide = () => {
             ctx && typeof ctx.peso === "number" && ctx.peso > 0 ? ctx?.peso : ""
           }
           onChange={(e) => ctx?.setPeso(parseFloat(e.target.value))}
+          disabled={ctx?.showItem ? true : false}
         />
       </div>
-      <button onClick={handleCalculeteButton} className={styles.buttonCalc}>
+      <button
+        onClick={handleCalculeteButton}
+        className={styles.buttonCalc}
+        disabled={ctx?.showItem ? true : false}
+      >
         Calcular
       </button>
     </section>
