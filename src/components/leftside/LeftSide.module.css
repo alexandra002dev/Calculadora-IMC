@@ -1,0 +1,36 @@
+section {
+  display: flex;
+  flex-direction: column;
+}
+.containerInput {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.title {
+  color: rgb(46, 44, 44);
+  font-size: 40px;
+}
+.text {
+  color: #8e8e8e;
+}
+input {
+  border: 0;
+  border-bottom: 2px solid #ccc;
+  padding: 5px;
+  margin-bottom: 8px;
+}
+
+.buttonCalc {
+  background-color: #227c9d;
+  border-radius: 8px;
+  padding: 10px 0;
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+  box-shadow: 2px 3px 12px #0e0e0eb5;
+  transition: 0.5s;
+}
+.buttonCalc:hover {
+  opacity: 0.9;
+}
